@@ -1,0 +1,33 @@
+<%= form_for(@saison) do |f| %>
+  <% if @saison.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@saison.errors.count, "error") %> prohibited this saison from being saved:</h2>
+
+      <ul>
+      <% @saison.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start %><br />
+    <%= f.datetime_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label :end %><br />
+    <%= f.datetime_select :end %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :liga_id %><br />
+	<%= select_tag 'saison[liga_id]', options_from_collection_for_select(@ligas, "id", "name") %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

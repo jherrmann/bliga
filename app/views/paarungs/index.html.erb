@@ -1,0 +1,37 @@
+<h1>Listing paarungs</h1>
+
+<table>
+  <tr>
+    <th>Spieltag</th>
+    <th>Heim</th>
+    <th>Gast</th>
+    <th>Start</th>
+    <th>Torh</th>
+    <th>Torg</th>
+    <th>Verlaengerung</th>
+    <th>Elfmeter</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @paarungs.each do |paarung| %>
+  <tr>
+    <td><%= paarung.spieltag_id %></td>
+    <td><%= paarung.heim %></td>
+    <td><%= paarung.gast %></td>
+    <td><%= paarung.start %></td>
+    <td><%= paarung.torh %></td>
+    <td><%= paarung.torg %></td>
+    <td><%= paarung.verlaengerung %></td>
+    <td><%= paarung.elfmeter %></td>
+    <td><%= link_to 'Show', paarung %></td>
+    <td><%= link_to 'Edit', edit_paarung_path(paarung) %></td>
+    <td><%= link_to 'Destroy', paarung, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Paarung', new_paarung_path %>

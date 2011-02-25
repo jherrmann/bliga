@@ -1,0 +1,29 @@
+<h1>Listing saisons</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th>Name</th>
+    <th>Liga</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @saisons.each do |saison| %>
+  <tr>
+    <td><%= saison.start %></td>
+    <td><%= saison.end %></td>
+    <td><%= saison.name %></td>
+    <td><%= saison.liga_id %></td>
+    <td><%= link_to 'Show', saison %></td>
+    <td><%= link_to 'Edit', edit_saison_path(saison) %></td>
+    <td><%= link_to 'Destroy', saison, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Saison', new_saison_path %>

@@ -1,4 +1,18 @@
 Bliga::Application.routes.draw do
+  resources :tipps
+
+  resources :paarungs
+
+  resources :spieltags
+
+  resources :regels
+
+  resources :saisons
+
+  resources :ligas
+
+  resources :vereins
+
   resources :users, :user_sessions
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout

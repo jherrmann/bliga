@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @verein.name %>
+</p>
+
+<p>
+  <b>Logo:</b>
+  <%= @verein.logo %>
+</p>
+
+
+<%= link_to 'Edit', edit_verein_path(@verein) %> |
+<%= link_to 'Back', vereins_path %>

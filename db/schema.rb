@@ -10,7 +10,42 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101228105327) do
+ActiveRecord::Schema.define(:version => 20110224191335) do
+
+  create_table "ligas", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "paarungs", :force => true do |t|
+    t.integer  "spieltag_id"
+    t.integer  "heim"
+    t.integer  "gast"
+    t.datetime "start"
+    t.integer  "torh"
+    t.integer  "torg"
+    t.boolean  "verlaengerung"
+    t.boolean  "elfmeter"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "regels", :force => true do |t|
+    t.string   "typ"
+    t.integer  "punkte"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "saisons", :force => true do |t|
+    t.datetime "start"
+    t.datetime "end"
+    t.string   "name"
+    t.integer  "liga_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
@@ -21,6 +56,23 @@ ActiveRecord::Schema.define(:version => 20101228105327) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "spieltags", :force => true do |t|
+    t.integer  "saison"
+    t.integer  "nummer"
+    t.datetime "datum"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tipps", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "paarung_id"
+    t.integer  "toreheim"
+    t.integer  "toregast"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.datetime "created_at"
@@ -41,5 +93,12 @@ ActiveRecord::Schema.define(:version => 20101228105327) do
   add_index "users", ["last_request_at"], :name => "index_users_on_last_request_at"
   add_index "users", ["login"], :name => "index_users_on_login"
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
+
+  create_table "vereins", :force => true do |t|
+    t.string   "name"
+    t.string   "logo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

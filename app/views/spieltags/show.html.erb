@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Saison:</b>
+  <%= @spieltag.saison %>
+</p>
+
+<p>
+  <b>Nummer:</b>
+  <%= @spieltag.nummer %>
+</p>
+
+<p>
+  <b>Datum:</b>
+  <%= @spieltag.datum %>
+</p>
+
+
+<%= link_to 'Edit', edit_spieltag_path(@spieltag) %> |
+<%= link_to 'Back', spieltags_path %>

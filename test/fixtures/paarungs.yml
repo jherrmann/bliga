@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  spieltag_id: 1
+  heim: 1
+  gast: 1
+  start: 2011-02-24 20:10:47
+  torh: 1
+  torg: 1
+  verlaengerung: false
+  elfmeter: false
+
+two:
+  spieltag_id: 1
+  heim: 1
+  gast: 1
+  start: 2011-02-24 20:10:47
+  torh: 1
+  torg: 1
+  verlaengerung: false
+  elfmeter: false

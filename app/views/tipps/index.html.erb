@@ -1,0 +1,29 @@
+<h1>Listing tipps</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Paarung</th>
+    <th>Toreheim</th>
+    <th>Toregast</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipps.each do |tipp| %>
+  <tr>
+    <td><%= tipp.user_id %></td>
+    <td><%= tipp.paarung_id %></td>
+    <td><%= tipp.toreheim %></td>
+    <td><%= tipp.toregast %></td>
+    <td><%= link_to 'Show', tipp %></td>
+    <td><%= link_to 'Edit', edit_tipp_path(tipp) %></td>
+    <td><%= link_to 'Destroy', tipp, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipp', new_tipp_path %>

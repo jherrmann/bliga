@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Typ:</b>
+  <%= @regel.typ %>
+</p>
+
+<p>
+  <b>Punkte:</b>
+  <%= @regel.punkte %>
+</p>
+
+
+<%= link_to 'Edit', edit_regel_path(@regel) %> |
+<%= link_to 'Back', regels_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@spieltag) do |f| %>
+  <% if @spieltag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spieltag.errors.count, "error") %> prohibited this spieltag from being saved:</h2>
+
+      <ul>
+      <% @spieltag.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :saison %><br />
+    <%= f.text_field :saison %>
+  </div>
+  <div class="field">
+    <%= f.label :nummer %><br />
+    <%= f.text_field :nummer %>
+  </div>
+  <div class="field">
+    <%= f.label :datum %><br />
+    <%= f.datetime_select :datum %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

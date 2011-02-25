@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  saison: 1
+  nummer: 1
+  datum: 2011-02-24 20:08:43
+
+two:
+  saison: 1
+  nummer: 1
+  datum: 2011-02-24 20:08:43

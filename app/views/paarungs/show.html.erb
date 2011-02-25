@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Spieltag:</b>
+  <%= @paarung.spieltag_id %>
+</p>
+
+<p>
+  <b>Heim:</b>
+  <%= @paarung.heim %>
+</p>
+
+<p>
+  <b>Gast:</b>
+  <%= @paarung.gast %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @paarung.start %>
+</p>
+
+<p>
+  <b>Torh:</b>
+  <%= @paarung.torh %>
+</p>
+
+<p>
+  <b>Torg:</b>
+  <%= @paarung.torg %>
+</p>
+
+<p>
+  <b>Verlaengerung:</b>
+  <%= @paarung.verlaengerung %>
+</p>
+
+<p>
+  <b>Elfmeter:</b>
+  <%= @paarung.elfmeter %>
+</p>
+
+
+<%= link_to 'Edit', edit_paarung_path(@paarung) %> |
+<%= link_to 'Back', paarungs_path %>

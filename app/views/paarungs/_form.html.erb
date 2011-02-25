@@ -1,0 +1,49 @@
+<%= form_for(@paarung) do |f| %>
+  <% if @paarung.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@paarung.errors.count, "error") %> prohibited this paarung from being saved:</h2>
+
+      <ul>
+      <% @paarung.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :spieltag_id %><br />
+    <%= f.text_field :spieltag_id %>
+  </div>
+  <div class="field">
+    <%= f.label :heim %><br />
+    <%= f.text_field :heim %>
+  </div>
+  <div class="field">
+    <%= f.label :gast %><br />
+    <%= f.text_field :gast %>
+  </div>
+  <div class="field">
+    <%= f.label :start %><br />
+    <%= f.datetime_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label :torh %><br />
+    <%= f.text_field :torh %>
+  </div>
+  <div class="field">
+    <%= f.label :torg %><br />
+    <%= f.text_field :torg %>
+  </div>
+  <div class="field">
+    <%= f.label :verlaengerung %><br />
+    <%= f.check_box :verlaengerung %>
+  </div>
+  <div class="field">
+    <%= f.label :elfmeter %><br />
+    <%= f.check_box :elfmeter %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

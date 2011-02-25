@@ -1,0 +1,23 @@
+<h1>Listing ligas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ligas.each do |liga| %>
+  <tr>
+    <td><%= liga.name %></td>
+    <td><%= link_to 'Show', liga %></td>
+    <td><%= link_to 'Edit', edit_liga_path(liga) %></td>
+    <td><%= link_to 'Destroy', liga, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Liga', new_liga_path %>

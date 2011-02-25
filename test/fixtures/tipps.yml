@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  paarung_id: 1
+  toreheim: 1
+  toregast: 1
+
+two:
+  user_id: 1
+  paarung_id: 1
+  toreheim: 1
+  toregast: 1
